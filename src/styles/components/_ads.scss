@@ -1,0 +1,58 @@
+// Ads component
+
+$lucian-ads-name: 'c-ads';
+
+.#{$lucian-ads-name} {
+
+  background: $grey-light;
+  width: 100%;
+
+  &__header {
+    //border: 1px solid red;
+    //
+    //@include media-query(lg) {
+    //  border: 1px solid green;
+    //}
+    //@include media-query(md) {
+    //  border: 1px solid black;
+    //}
+    //@include media-query(sm) {
+    //  border: 1px solid yellow;
+    //}
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-query(md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include media-query(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__content, &__header {
+    padding: $s-size $m-size;
+
+    @include media-query(md-and-up) {
+      padding: $l-size $xl-size;
+    }
+  }
+
+  &__pagination {
+    justify-content: flex-end;
+  }
+
+  &__image {
+    height: 80px;
+    width: 80px;
+      &--circle {
+        border-radius: 50%;
+      }
+  }
+}

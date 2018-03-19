@@ -1,0 +1,59 @@
+// overwrite
+// Pagination component
+
+$lucian-pagination-name: 'pagination';
+
+.#{$lucian-pagination-name} {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+
+  .pager .item a:hover {
+    background: #dcdcdb;
+    color: #545454;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  @include media-query(md-and-up) {
+    justify-content: space-between;
+  }
+}
+
+.c-pagination {
+  &__link {
+    color: $grey-lighter;
+    display:inline-block;
+    line-height:1.2;
+    margin: $s-size;
+    vertical-align:middle;
+
+    &-active{
+      color: $off-black;
+    }
+
+    &-item {
+      background: $off-white;
+      height: 40px;
+      margin: .5rem;
+      width: 40px;
+
+      &:last-child {
+        font-size: 1.2rem;
+        width: 100px;
+
+        @include media-query(md-and-up) {
+          font-size: 1.6rem;
+          width: 110px;
+        }
+
+        & > a {
+          color: $off-black;
+        }
+      }
+    }
+  }
+}

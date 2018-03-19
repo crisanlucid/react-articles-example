@@ -1,0 +1,14 @@
+{
+  "short_name": "Lucian's Olx App",
+  "name": "Lucian's Amazing Application ++",
+  "icons": [
+    {
+      "src": "images/favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "landscape"
+}

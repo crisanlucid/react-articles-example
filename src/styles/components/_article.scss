@@ -1,0 +1,44 @@
+// Article component
+
+$lucian-article-name: 'c-article';
+
+.#{$lucian-article-name} {
+
+  background: $off-white;
+  margin-bottom: $l-size;
+  padding: $m-size;
+
+  @include media-query(md) {
+    max-width: 44%;
+  }
+
+  @include media-query(lg) {
+    max-width: 28%;
+  }
+
+  &__titlebox {
+    color: $violet;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &-details {
+      color: $grey-lighter;
+    }
+  }
+
+  &__item {
+    &-title {
+      margin-right: $s-size;
+    }
+
+    &-value {
+      margin-right: $s-size;
+    }
+
+    &--separate {
+      border-left: 1px solid;
+      padding-left: $s-size;
+    }
+  }
+}
