@@ -16,7 +16,7 @@ export default class OlxApp extends React.Component {
 
         this.handlePageChange = this.handlePageChange.bind(this);
         this.handleArticlesPage = this.handleArticlesPage.bind(this);
-        this.textNextButton = 'Next Button';
+        this.textNextButton = 'Last';
     }
 
     handleFetchArticles = () => {
