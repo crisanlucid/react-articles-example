@@ -27,8 +27,38 @@ module.exports = {
     },
     plugins: [
         new OfflinePlugin({
-            externals: ['index.html'],
-        })
+                safeToUseOptionalCaches: true,
+                externals: [
+                    '/images/favicon.png',
+                    '/images/OLX_Logo.jpg',
+                    '/index.html',
+                    '/mock/ads.json',
+                    '/manifest.json',
+                    '/'
+                ],
+                publicPath: '/',
+                caches: {
+                    main: [
+                        '/',
+                        'bundle.js'
+                    ],
+                    additional: [
+                        ':externals:'
+                    ],
+                    optional: [
+                        ':rest:'
+                    ]
+                },
+
+                ServiceWorker: {
+                    publicPath: '/sw.js',
+                    events: true,
+                    navigateFallbackURL: '/'
+                },
+                AppCache: {
+                    events: true
+                }
+            })
     ]
 };
 
